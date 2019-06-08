@@ -14,3 +14,8 @@ run:
 test:
 	python -m pytest
 
+docker_build:
+	docker build -t hello-world-printer .
+
+docker_run:
+	sudo docker run --name flask_app -p 5000:5000 -d hello-world-printer
